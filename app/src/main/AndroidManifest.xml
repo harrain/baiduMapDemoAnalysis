@@ -243,7 +243,15 @@
             android:screenOrientation="portrait"
             android:label="@string/demo_track_show" >
         </activity>
+        <service android:name=".map.MyLocationService" />
 
+        <receiver
+            android:name=".MyLocationReceiver">
+            <intent-filter>
+                <action android:name="baiduMap.MyLocationService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
 
     </application>
 
