@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
+import baidumapsdk.demo.util.LocationRequest;
+
 public class MyLocationService extends Service {
 
     private static String TAG = "MyLocationService";
@@ -16,7 +18,7 @@ public class MyLocationService extends Service {
     public void onCreate() {
         super.onCreate();
         lr = new LocationRequest(getApplicationContext());
-        lr.startLocate(new LocationRequest.LocationListener() {
+        lr.startLocate(new LocationRequest.LocationFormatListener() {
             @Override
             public void onLocate(String latitude, String longtitude) {
                 Log.i(TAG,"经"+longtitude+"纬"+latitude);

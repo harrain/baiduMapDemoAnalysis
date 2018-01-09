@@ -22,7 +22,7 @@ import android.widget.TextView;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.VersionInfo;
 
-import baidumapsdk.demo.map.LocationDemo;
+import baidumapsdk.demo.remould.locate.LocationDemo;
 import baidumapsdk.demo.map.LayersDemo;
 import baidumapsdk.demo.map.HeatMapDemo;
 import baidumapsdk.demo.map.BaseMapDemo;
@@ -38,9 +38,10 @@ import baidumapsdk.demo.map.OpenglDemo;
 import baidumapsdk.demo.map.OverlayDemo;
 import baidumapsdk.demo.map.TextureMapViewDemo;
 import baidumapsdk.demo.map.TileOverlayDemo;
-import baidumapsdk.demo.map.TrackShowDemo;
+import baidumapsdk.demo.remould.overlay.TrackShowDemo;
 import baidumapsdk.demo.map.UISettingDemo;
-import baidumapsdk.demo.search.RoutePlanDemo;
+import baidumapsdk.demo.remould.guide.GuideMainActivity;
+import baidumapsdk.demo.remould.routeplan.RoutePlanDemo;
 import baidumapsdk.demo.search.BusLineSearchDemo;
 import baidumapsdk.demo.search.DistrictSearchDemo;
 import baidumapsdk.demo.search.GeoCoderDemo;
@@ -114,6 +115,7 @@ public class BMapApiDemoMain extends Activity {
     }
 
     private static final DemoInfo[] DEMOS = {
+            new DemoInfo(R.string.demo_title_guide,R.string.demo_desc_guide, GuideMainActivity.class),
             new DemoInfo(R.string.demo_title_basemap,
                     R.string.demo_desc_basemap, BaseMapDemo.class),
             new DemoInfo(R.string.demo_title_map_fragment,
