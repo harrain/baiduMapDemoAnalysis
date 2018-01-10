@@ -52,7 +52,10 @@ import baidumapsdk.demo.cloud.CloudSearchDemo;
 import baidumapsdk.demo.radar.RadarDemo;
 import baidumapsdk.demo.util.OpenBaiduMap;
 
-
+/**
+ * master分支是封装过的，定位、导航、线点overlay都做成了fragment。便于移植
+ * 只是地图demo分支就是原来百度地图开发者平台提供的地图demo
+ */
 public class BMapApiDemoMain extends Activity {
     private static final String LTAG = BMapApiDemoMain.class.getSimpleName();
 
